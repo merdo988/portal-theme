@@ -39,7 +39,7 @@ unset($languages[$lang]);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Portal System',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -47,19 +47,12 @@ unset($languages[$lang]);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/home']],
-        ['label' => 'Sample', 'url' => ['/sample/samples/index'],
+        ['label' => 'Banner', 'url' => ['/banner/banners/index'],
             'items' => [
-                    ['label' => 'Create', 'url' => ['/sample/samples/create']],
-                    ['label' => 'Manage', 'url' => ['/sample/samples/index']]
+                    ['label' => 'Create', 'url' => ['/banner/bannerr/create']],
+                    ['label' => 'Manage', 'url' => ['/banner/bannerr/index']]
             ]
         ],
-        ['label' => 'Menu', 'url' => ['/menu/menu/index'],
-            'items' => [
-                    ['label' => 'Create', 'url' => ['/menu/menu/create']],
-                    ['label' => 'Manage', 'url' => ['/menu/menu/index']]
-            ]
-        ],
-        ['label' => 'Settings', 'url' => ['/site/setting']],
 
     ];
     if (Yii::$app->user->isGuest) {
